@@ -9,7 +9,7 @@
           <img src="/logo.png" alt="tchewa.com" />
         </nuxt-link>
         <v-spacer />
-        <AppCart />
+        <AppSubmit />
       </v-container>
       <v-container class="pt-0 hidden-sm-and-down">
         <v-row dense>
@@ -34,15 +34,17 @@
 </template>
 
 <script>
+import Submit from "./Submit.vue";
 export default {
-  data() {
-    return {};
-  },
-  computed: {
-    page() {
-      return this.$route.path.split("/")[1];
+    data() {
+        return {};
     },
-  },
+    computed: {
+        page() {
+            return this.$route.path.split("/")[1];
+        },
+    },
+    components: { Submit }
 };
 </script>
 
