@@ -53,7 +53,7 @@
                 color="white"
                 height="65"
                 :ripple="false"
-                class="text-none text-subtitle-1 px-12 info--text text-uppercase text-decoration-underline"
+                class="text-none text-subtitle-1 px-12 info--text text-uppercase"
                 to="contact-us"
                 >Contact Us</v-btn
               >
