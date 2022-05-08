@@ -1,0 +1,235 @@
+body.fixed {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+body.fixed::-webkit-scrollbar {
+  display: none;
+}
+body,
+.v-application {
+  background-color: #0a094d !important;
+}
+.v-card--link:hover:before,
+.v-card--link:focus:before {
+  opacity: 0 !important;
+}
+._container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.pointer {
+  cursor: pointer;
+}
+.pre-line {
+  white-space: pre-line !important;
+}
+.bg-img {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.col_1x1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 12px;
+}
+.col_3x1 {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 12px;
+}
+.col_3x2 {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-gap: 12px;
+}
+.col_2x1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 12px;
+}
+.cover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1px;
+  .service:nth-child(odd) {
+    background-color: #00000010;
+  }
+  .service:nth-child(even) {
+    background-color: #00000007;
+  }
+}
+._search {
+  border-left: 2px solid #eeeeee !important;
+  cursor: pointer;
+}
+._search:hover {
+  border-left: 2px solid #00398c !important;
+  background-color: #00398c10;
+  color: #00398c !important;
+  i {
+    color: #00398c !important;
+  }
+}
+._search.info:hover {
+  i {
+    color: #ffffff !important;
+  }
+}
+.sticky-top {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 99;
+}
+.fixed-top {
+  position: fixed !important;
+  top: 0;
+  z-index: 999;
+}
+.border-bottom {
+  border-bottom: 1px solid #00000020 !important;
+}
+.border-top {
+  border-top: 1px solid #00000020 !important;
+}
+.bordered {
+  border: 1px solid #00000020 !important;
+}
+border-left {
+  border-left: 1px solid #00000020 !important;
+}
+.border-right {
+  border-right: 1px solid #00000020 !important;
+}
+.borders {
+  border-bottom: 1px solid #00000020 !important;
+  border-top: 1px solid #00000020 !important;
+}
+
+.shadow-bottom {
+  box-shadow: rgb(0 0 0 / 25%) 0px 8px 8px -8px !important;
+  transition: box-shadow 300ms ease-in-out 0s;
+}
+.shadow {
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 8px 0px !important;
+  transition: box-shadow 300ms ease-in-out 0s;
+  overflow: hidden;
+}
+.text-nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.one-line {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-line-clamp: 1;
+}
+.two-lines {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-line-clamp: 2;
+}
+.three-lines {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-line-clamp: 3;
+}
+.img-cover {
+  background-position: center center;
+  background-size: cover;
+}
+p {
+  margin-bottom: 40px !important;
+  line-height: 32px !important;
+}
+
+.flow-horizontal {
+  display: flex;
+  overflow: hidden;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.flow-horizontal::-webkit-scrollbar {
+  display: none;
+}
+
+.s-header {
+  -webkit-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -o-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-box-shadow: 0 0 13px rgb(1 1 1 / 7%);
+  box-shadow: 0 0 13px rgb(1 1 1 / 7%);
+  background-color: #fff;
+  z-index: 99 !important;
+}
+.__menu {
+  position: fixed;
+  z-index: 999999 !important;
+  top: 105px;
+  left: 0;
+  right: 0;
+}
+.amenities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+}
+.bg-cover {
+  background-position: center center;
+  background-size: cover;
+}
+.bg-overlay {
+  background-color: #313d4c99;
+}
+.cta {
+  background-image: url("/img/breadcrums.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  .hero {
+    min-height: 300px;
+    height: auto;
+    width: 100%;
+    background-color: #313d4ccc;
+  }
+}
+
+.hover:hover {
+  background-color: #00000010;
+  cursor: pointer;
+}
+.call-to-action {
+  height: calc(100vh - 105px);
+
+  background-position: center center;
+  background-size: cover;
+  .hero {
+    height: 100%;
+    width: 100%;
+    background-color: #00000035;
+  }
+}
+@media (max-width: 600px) {
+  .__menu {
+    top: 75px;
+  }
+}
