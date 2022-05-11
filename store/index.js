@@ -5,6 +5,44 @@ export const state = () => ({
     {
       _id: "58c039938060197ca0b52d4d",
       slug: "bringing-afro-latin-flavor-to-cosmopolitan-abu-dhabi-1234567890986543",
+      title: "Bringing Afro-Latin flavor to cosmopolitan Abu Dhab f",
+      desc: `
+      <h3 class="mb-3">Why Afro- Latin?</h3>
+      <p>Latin America and Africa share a load of similarities and diversity, in culture, arts, music, food, dance, etc. They are both referred to as the continent of colors. Bringing these two unique cultures together is going to be history in the making. Its impact will leave footprints in the hearts of the city dwellers. Truly Something that Abu Dhabi has never experienced before.</p>
+      <p>Music, Fashion, Live performances, Dance, Food, Arts, Cosmetics</p>
+      <p>Grab your tickets online on Virgin Megastore</p>
+      <p><strong>Entry:</strong> 75Dhs ( To be available soon). Free entry for children 12 years and below.</p>
+      `,
+      author: "58c039018060197ca0b52d4c",
+      image: "/img/hero/DSC05588.jpg",
+      video: `<iframe width="100%" height="315" src="https://www.youtube.com/embed/s6Y62ikXbLw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>`,
+      cat: ["festival"],
+      price: {
+        regular: "75",
+        currency: "AED",
+        exemption: "Free entry for children 12 years and below",
+      },
+      details: {
+        venue: "Radisson Blu Hotel & Resort",
+        starts: { date: "2020-03-06", time: "15:00" },
+        ends: { date: "2020-03-06", time: "21:00" },
+        attendance: "in-person",
+        website: "",
+      },
+      location: {
+        street: "Corniche Rd",
+        suite: "",
+        city: "Al Bateen",
+        state: "Abu Dhabi",
+        country: "United Arab Emirates",
+        zip: "",
+        geo: { lat: 24.466667, lng: 54.366669 },
+      },
+      createdAt: "2017-03-08T17:04:19.860Z",
+    },
+    {
+      _id: "58c039938060197ca0b52d4d",
+      slug: "bringing-afro-latin-flavor-to-cosmopolitan-abu-dhabi-1234567890986543",
       title: "Bringing Afro-Latin flavor to cosmopolitan Abu Dhab",
       desc: `
       <h3 class="mb-3">Why Afro- Latin?</h3>

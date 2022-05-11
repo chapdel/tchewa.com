@@ -24,7 +24,7 @@
             Start Team
         ----------------------------------------------- -->
         <v-row class="mt-13">
-          <v-col cols="12" md="6" lg="4">
+          <v-col cols="12" md="6" lg="3">
             <v-card elevation="0" class="team-card overflow-hidden mb-15">
               <div class="social-overlay">
                 <v-img
@@ -36,11 +36,11 @@
                 <h5 class="team-title font-weight-medium text-h5">
                   Hervé Tchewa
                 </h5>
-                <!-- <p class="team-subtitle">Property Specialist</p> -->
+                <p class="team-subtitle">Event Director</p>
               </div>
             </v-card>
           </v-col>
-          <v-col cols="12" md="6" lg="4">
+          <v-col cols="12" md="6" lg="3">
             <v-card elevation="0" class="team-card overflow-hidden mb-15">
               <div class="social-overlay">
                 <v-img
@@ -52,11 +52,11 @@
                 <h5 class="team-title font-weight-medium font-18 text-h5">
                   Saskia Aleseh
                 </h5>
-                <!-- <p class="team-subtitle">Property Specialist</p> -->
+                <p class="team-subtitle">Communication Director</p>
               </div>
             </v-card>
           </v-col>
-          <v-col cols="12" md="6" lg="4">
+          <v-col cols="12" md="6" lg="3">
             <v-card elevation="0" class="team-card overflow-hidden mb-15">
               <div class="social-overlay">
                 <v-img
@@ -68,7 +68,23 @@
                 <h5 class="team-title font-weight-medium font-18 text-h5">
                   Chendjou Kyria
                 </h5>
-                <!-- <p class="team-subtitle">Property Specialist</p> -->
+                <p class="team-subtitle">Official Sponsor</p>
+              </div>
+            </v-card>
+          </v-col>
+          <v-col cols="12" md="6" lg="3">
+            <v-card elevation="0" class="team-card overflow-hidden mb-15">
+              <div class="social-overlay">
+                <v-img
+                  src="/team/4.jpg"
+                  alt="team"
+                />
+              </div>
+              <div class="py-3">
+                <h5 class="team-title font-weight-medium font-18 text-h5">
+                  Chendjou Kyria
+                </h5>
+                <p class="team-subtitle">Official Sponsor</p>
               </div>
             </v-card>
           </v-col>

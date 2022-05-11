@@ -1,6 +1,17 @@
 <template>
-  <v-btn icon large color="white" :ripple="false" to="/cart">
-      Submit your project
+    <v-btn
+      color="white"
+      large
+      to="/submit-project"
+    >
+
+      <v-icon
+        left
+        color="blue darken-2"
+      >
+        mdi-cloud-upload
+      </v-icon>
+       Submit your project
     </v-btn>
 </template>
 

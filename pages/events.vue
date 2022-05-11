@@ -2,7 +2,7 @@
   <div>
     <section>
       <v-container style="max-width: 1024px" class="pa-3 pa-sm-8">
-        <div class="d-flex align-start mb-4">
+        <!-- <div class="d-flex align-start mb-4">
           <v-card tile flat width="100%" class="pr-2 transparent">
             <v-text-field outlined class="mb-n6" placeholder="Search events" />
           </v-card>
@@ -16,7 +16,7 @@
           >
             Search
           </v-btn>
-        </div>
+        </div> -->
         <div v-if="$store.state.events.length">
           <v-card
             tile

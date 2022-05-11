@@ -3,7 +3,7 @@ export default {
   ssr: false,
 
   // Target: https://go.nuxtjs.dev/config-target
-  target: "static",
+  target: "server",
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -26,9 +26,9 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    "@/plugins/translate.js",
-    "@/plugins/capitalize.js",
-    "./plugins/main.js",
+    { src: "@/plugins/translate.js", mode: "client" },
+    { src: "@/plugins/capitalize.js", mode: "client" },
+    { src: "./plugins/main.js", mode: "client" },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -45,12 +45,28 @@ export default {
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
     "cookie-universal-nuxt",
+    "nuxt-mail",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: "https://snapciti.herokuapp.com",
+    baseURL: process.env.BASE_URL,
+  },
+
+  // nodemail
+  mail: {
+    message: {
+      to: "info@tchewa.com",
+    },
+    smtp: {
+      host: "smtp.mailtrap.io",
+      port: 2525,
+      auth: {
+        user: "3c6b6198cc46d8",
+        pass: "af62cd84e51fcc",
+      },
+    },
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
