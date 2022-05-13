@@ -3,42 +3,45 @@
 export const state = () => ({
   events: [
     {
-      _id: "58c039938060197ca0b52d4d",
-      slug: "bringing-afro-latin-flavor-to-cosmopolitan-abu-dhabi-1234567890986543",
-      title: "Bringing Afro-Latin flavor to cosmopolitan Abu Dhab f",
+      _id: "58c03738060197ca0b52d4d",
+      slug: "professionals-across-african-diaspora-summit",
+      title: "PROFESSIONALS ACROSS AFRICAN DIASPORA SUMMIT",
       desc: `
-      <h3 class="mb-3">Why Afro- Latin?</h3>
-      <p>Latin America and Africa share a load of similarities and diversity, in culture, arts, music, food, dance, etc. They are both referred to as the continent of colors. Bringing these two unique cultures together is going to be history in the making. Its impact will leave footprints in the hearts of the city dwellers. Truly Something that Abu Dhabi has never experienced before.</p>
-      <p>Music, Fashion, Live performances, Dance, Food, Arts, Cosmetics</p>
-      <p>Grab your tickets online on Virgin Megastore</p>
-      <p><strong>Entry:</strong> 75Dhs ( To be available soon). Free entry for children 12 years and below.</p>
+      <h3 class="mb-3">WHAT IS PAADS? </h3>
+      <p>PAADS is an international event where like-minded Individuals (professionals) in various walks of life and from different parts of the world, coming together with the purpose of Influencing change in their communities and the world at large. In a nutshell, it’s an event for influential and accomplished individuals who wants to leave their positive footprints in our societies. This will be achieved through community building, networking, business opportunities, wealth building, scholarship programs, and creating bonds and support systems on the globe. Men and women with the Passion to create an impact in the world!</p>
+      <p>This event will also encourage and enforce local brands and business of each community to break borders. We will support and promote local inventions, innovations, brands, create business and employment opportunities in our communities.</p>
       `,
       author: "58c039018060197ca0b52d4c",
-      image: "/img/hero/DSC05588.jpg",
-      video: `<iframe width="100%" height="315" src="https://www.youtube.com/embed/s6Y62ikXbLw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>`,
+      image: "/img/paads.jpeg",
       cat: ["festival"],
       price: {
-        regular: "75",
-        currency: "AED",
-        exemption: "Free entry for children 12 years and below",
+        regular: "50 000",
+        currency: "CFA F",
+        //exemption: "Free entry for children 12 years and below",
       },
       details: {
-        venue: "Radisson Blu Hotel & Resort",
-        starts: { date: "2020-03-06", time: "15:00" },
-        ends: { date: "2020-03-06", time: "21:00" },
+        venue: "Palais des Congrès",
+        starts: { date: "2022-05-28", time: "18:00" },
+        ends: { date: "2022-05-28", time: "22:00" },
         attendance: "in-person",
         website: "",
       },
       location: {
-        street: "Corniche Rd",
+        street: "Avenue Jean Paul II",
         suite: "",
-        city: "Al Bateen",
-        state: "Abu Dhabi",
-        country: "United Arab Emirates",
+        city: "Yaounde",
+        state: "Center",
+        country: "Cameroon",
         zip: "",
-        geo: { lat: 24.466667, lng: 54.366669 },
+        geo: { lat: 3.8908443, lng: 11.498111 },
       },
-      createdAt: "2017-03-08T17:04:19.860Z",
+      createdAt: "2022-05-12T17:04:19.860Z",
+      acting: [
+        {
+          route:"/submit-project",
+          label: "Apply",
+        }
+      ]
     },
     {
       _id: "58c039938060197ca0b52d4d",
@@ -77,6 +80,16 @@ export const state = () => ({
         geo: { lat: 24.466667, lng: 54.366669 },
       },
       createdAt: "2017-03-08T17:04:19.860Z",
+      acting: [
+        {
+          route:"/events/professionals-across-african-diaspora-summit",
+          label: "View Event",
+        },
+        {
+          route:"/events/professionals-across-african-diaspora-summit",
+          label: "View Event",
+        },
+      ]
     },
   ],
   tours: [],

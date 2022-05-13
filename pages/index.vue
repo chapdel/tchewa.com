@@ -16,21 +16,37 @@
           >
             THE GREAT EXPERIENCE
           </div>
-          <v-card
-            tile
-            flat
-            to="/events"
-            max-width="300"
-            class="info pa-3 mx-auto white--text"
-            :ripple="false"
-          >
-            BROWSE<br />
-            UPCOMING EVENTS
-          </v-card>
+          <v-row>
+            <v-col cols="12">
+              <v-card
+                tile
+                flat
+                to="/events"
+                max-width="300"
+                class="info pa-3 mx-auto white--text my-2"
+                :ripple="false"
+              >
+                BROWSE<br />
+                UPCOMING EVENTS
+              </v-card>
+              <v-card
+                tile
+                flat
+                to="/submit-project"
+                max-width="300"
+                class="orange darken-4 pa-3 mx-auto white--text my-2"
+                :ripple="false"
+              >
+                SUBMIT<br />
+                YOUR PROJECT
+              </v-card>
+            </v-col>
+
+          </v-row>
         </div>
       </div>
     </section>
-    <!-- 
+    <!--
     <section
       class="call-to-action d-none"
       :style="`background-image: url('/img/hero${hero}.jpg');`"

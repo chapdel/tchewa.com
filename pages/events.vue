@@ -36,7 +36,7 @@
                   <h4
                     class="error--text my-1 text-subtitle-2 text-sm-subtitle-1 font-weight-medium"
                   >
-                    Fri, Mar 06 2020, {{ x.details.starts.time }}
+                    {{$dayjs(x.details.starts.date).format('ddd, MMM D YYYY')}}, {{ x.details.starts.time }}
                   </h4>
                   <div
                     class="text-caption text-sm-subtitle-2 font-weight-medium"

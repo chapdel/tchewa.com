@@ -3,7 +3,7 @@ export default {
   ssr: false,
 
   // Target: https://go.nuxtjs.dev/config-target
-  target: "server",
+  target: "static",
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -46,12 +46,23 @@ export default {
     "@nuxtjs/axios",
     "cookie-universal-nuxt",
     "nuxt-mail",
+    "@nuxtjs/dayjs",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: process.env.BASE_URL,
+  },
+
+  dayjs: {
+    locales: ["en"],
+    defaultLocale: "en",
+    defaultTimeZone: "Africa/Douala",
+    plugins: [
+      "utc", // import 'dayjs/plugin/utc'
+      "timezone", // import 'dayjs/plugin/timezone'
+    ], // Your Day.js plugin
   },
 
   // nodemail
@@ -66,6 +77,10 @@ export default {
         user: "3c6b6198cc46d8",
         pass: "af62cd84e51fcc",
       },
+      connectionTimeout: 180000,
+      greetingTimeout: 90000,
+      //maxConnections: 10,
+      debug: true,
     },
   },
 

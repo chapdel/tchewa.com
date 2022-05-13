@@ -8,11 +8,12 @@ Vue.mixin({
         "about",
         "team",
         "events",
-        "tours",
+        //"tours",
         "services",
         "gallery",
-        "reviews",
+        //"reviews",
         "contact",
+        "submit-project"
       ],
       gallery: [
         "DSC05566",

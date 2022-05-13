@@ -16,13 +16,6 @@
             </div>
           </v-col>
         </v-row>
-
-        <!-- -----------------------------------------------
-            End Team Text
-        ----------------------------------------------- -->
-        <!-- -----------------------------------------------
-            Start Team
-        ----------------------------------------------- -->
         <v-row class="mt-13">
           <v-col cols="12" md="6" lg="3">
             <v-card elevation="0" class="team-card overflow-hidden mb-15">
@@ -82,7 +75,7 @@
               </div>
               <div class="py-3">
                 <h5 class="team-title font-weight-medium font-18 text-h5">
-                  Chendjou Kyria
+                  Wabo Collincs
                 </h5>
                 <p class="team-subtitle">Official Sponsor</p>
               </div>

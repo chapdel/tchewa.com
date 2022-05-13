@@ -9,14 +9,18 @@
           <v-col class="col-4">
             <v-card tile flat height="100%" class="secondary pa-4">
               <div class="error--text text-subtitle-1 font-weight-black mb-2">
-                Fri, Mar 06 2020 {{ item.details.starts.time }} -
-                {{ item.details.ends.time }}
+                {{
+                  $dayjs(item.details.starts.date).format("ddd, MMM D YYYY")
+                }}, {{ item.details.starts.time }}
               </div>
               <h1>{{ item.title }}</h1>
               <div class="text-subtitle-1 font-weight-medium mt-3">
                 {{ item.price.regular }}
                 {{ item.price.currency }}
-                <div class="text-body-2 font-weight-regular text--secondary">
+                <div
+                  v-if="item.price.exemption"
+                  class="text-body-2 font-weight-regular text--secondary"
+                >
                   ({{ item.price.exemption }})
                 </div>
               </div>
@@ -29,6 +33,18 @@
             <v-col class="col-8"></v-col>
             <v-col class="col-4">
               <div class="px-4">
+
+                <v-btn
+                  block
+                  depressed
+                  large
+                  :ripple="false"
+                  :to="action.route"
+                  color="orange darken-4 text--white"
+                   v-for="(action, index) in item.acting" class="my-1" :key="index"
+                >
+                  {{action.label}}
+                </v-btn>
                 <v-btn
                   block
                   depressed
@@ -58,7 +74,11 @@
                   <div class="pl-6">
                     <h4>Date and time</h4>
                     <div class="text-body-2 text--secondary">
-                      Fri, Mar 06 2020
+                      {{
+                        $dayjs(item.details.starts.date).format(
+                          "ddd, MMM D YYYY"
+                        )
+                      }}
                     </div>
                     <div class="text-body-2 text--secondary">
                       {{ item.details.starts.time }} -
@@ -99,11 +119,14 @@
         >
           {{ item.price.regular }}
           {{ item.price.currency }}
-          <div class="text-body-2 font-weight-regular">
+          <div v-if="item.price.exemption" class="text-body-2 font-weight-regular">
             ({{ item.price.exemption }})
           </div>
         </div>
-        <v-btn block depressed large :ripple="false" to="/contact" color="info">
+        <v-btn v-for="(action, index) in item.acting" class="my-1" :key="index" block depressed large :ripple="false" :to="action.route" color="orange darken-4 text--white">
+          {{action.label}}
+        </v-btn>
+        <v-btn block depressed large :ripple="false" class="my-1" to="/contact" color="info">
           Contact Us
         </v-btn>
         <v-divider class="my-3" />
@@ -111,7 +134,9 @@
           <v-icon> mdi-calendar-outline </v-icon>
           <div class="pl-6">
             <h4>Date and time</h4>
-            <div class="text-body-2 text--secondary">Fri, Mar 06 2020</div>
+            <div class="text-body-2 text--secondary">
+              {{ $dayjs(item.details.starts.date).format("ddd, MMM D YYYY") }}
+            </div>
             <div class="text-body-2 text--secondary">
               {{ item.details.starts.time }} - {{ item.details.ends.time }}
             </div>
@@ -132,10 +157,14 @@
             </div>
           </div>
         </div>
-        <v-divider class="my-3" />
-        <div v-html="item.video" />
-        <v-divider class="my-3" />
-        <div v-html="item.desc" class="py-3" />
+        <div v-if="item.video">
+          <v-divider class="my-3" />
+          <div v-html="item.video" />
+        </div>
+        <div v-if="item.desc">
+          <v-divider class="my-3" />
+          <div v-html="item.desc" class="py-3" />
+        </div>
       </section>
     </v-container>
   </div>

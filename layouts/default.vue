@@ -3,7 +3,7 @@
     <div id="top" />
     <AppHeader />
     <v-main class="white">
-      <AppBreadcrums />
+      <!-- <AppBreadcrums /> -->
       <Nuxt />
     </v-main>
     <AppFooter />

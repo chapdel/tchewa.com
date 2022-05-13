@@ -9,22 +9,36 @@
           <img src="/logo.png" alt="tchewa.com" />
         </nuxt-link>
         <v-spacer />
-        <AppSubmit />
       </v-container>
       <v-container class="pt-0 hidden-sm-and-down">
         <v-row dense>
           <v-col v-for="(x, i) in nav" :key="i">
+
             <v-card
               tile
               flat
               height="45"
               dark
+              v-if="x != 'submit-project'"
               :to="`/${x}`"
               :ripple="false"
               class="transparent text-caption tab px-3 d-flex align-center justify-center text-no-wrap text-uppercase"
               :class="{ active: x == page }"
             >
               {{ x || "home" }}
+            </v-card>
+            <v-card
+              tile
+              height="45"
+              dark
+              v-else
+              color="orange darken-4"
+              :to="`/${x}`"
+              :ripple="false"
+              class="transparent text-caption tab px-3 d-flex align-center justify-center text-no-wrap text-uppercase"
+              :class="{ active: x == page }"
+            >
+              Submit your Project
             </v-card>
           </v-col>
         </v-row>
