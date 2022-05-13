@@ -286,7 +286,9 @@ export default {
 
       if (this.$refs.form.validate()) {
         var subject = "New project application";
+
         try {
+
           await this.$mail
             .send({
               from: this.form.email,
