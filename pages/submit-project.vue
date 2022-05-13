@@ -28,7 +28,6 @@
                       only submit one application per open call. The applicant
                       can modify his/her application until the call is closed.
                     </p>
-
                   </div>
                 </v-card-text>
               </v-card>
@@ -45,42 +44,40 @@
             <v-row justify="center">
               <v-col cols="12" sm="10" md="9" lg="7" class="mb-12">
                 <p>
-                      The final validation of an application is done
-                      automatically at the closing of the call. Once the call is
-                      closed, it is no longer possible for the applicant to
-                      modify his/her application after the call has been closed.
-                    </p>
-                    <h3>EVALUATION OF PROJECTS</h3>
-                    <p>
-                      Applications are processed and evaluated by the members of
-                      the jury after the call is closed and according to the
-                      timetable announced in the call description. A
-                      pre-selection is carried out by the project partners. It
-                      aims to eliminate all incomplete applications or those
-                      that do not meet the eligibility criteria clearly defined
-                      in the description of the call for applications. The
-                      pre-selected applications will then be submitted to the
-                      members of the jury for evaluation.
-                    </p>
-                    <p>
-                      Announcement of Results: <br />
-                      Successful applicants will be contacted directly by email.
-                      Applicants who have not been contacted should consider
-                      their application unsuccessful. They will of course be
-                      able to submit new applications when new calls are
-                      published.
-                    </p>
-                    <v-btn
-                      color="info"
-                      class="btn-custom-lg linking mt-3 btn-arrow"
-                      nuxt
-                      large
-                      @click="dialog = true"
-                      elevation="0"
-                    >
-                      <span>Submit my project</span>
-                      <i class="mdi mdi-cloud-upload"></i>
-                    </v-btn>
+                  The final validation of an application is done automatically
+                  at the closing of the call. Once the call is closed, it is no
+                  longer possible for the applicant to modify his/her
+                  application after the call has been closed.
+                </p>
+                <h3>EVALUATION OF PROJECTS</h3>
+                <p>
+                  Applications are processed and evaluated by the members of the
+                  jury after the call is closed and according to the timetable
+                  announced in the call description. A pre-selection is carried
+                  out by the project partners. It aims to eliminate all
+                  incomplete applications or those that do not meet the
+                  eligibility criteria clearly defined in the description of the
+                  call for applications. The pre-selected applications will then
+                  be submitted to the members of the jury for evaluation.
+                </p>
+                <p>
+                  Announcement of Results: <br />
+                  Successful applicants will be contacted directly by email.
+                  Applicants who have not been contacted should consider their
+                  application unsuccessful. They will of course be able to
+                  submit new applications when new calls are published.
+                </p>
+                <v-btn
+                  color="info"
+                  class="btn-custom-lg linking mt-3 btn-arrow"
+                  nuxt
+                  large
+                  @click="dialog = true"
+                  elevation="0"
+                >
+                  <span>Submit my project</span>
+                  <i class="mdi mdi-cloud-upload"></i>
+                </v-btn>
               </v-col>
             </v-row>
 
@@ -292,7 +289,7 @@ export default {
         try {
           await this.$mail
             .send({
-              from: this.email,
+              from: this.form.email,
               subject: subject,
               html:
                 `
@@ -533,7 +530,7 @@ table, td { color: #000000; } </style>
 
   <div style="line-height: 140%; text-align: left; word-wrap: break-word;">
     <p style="font-size: 14px; line-height: 140%;"><span style="font-size: 16px; line-height: 22.4px; font-family: Cabin, sans-serif;">` +
-                this.message +
+                this.form.description +
                 `</span></p>
   </div>
 
@@ -572,39 +569,37 @@ table, td { color: #000000; } </style>
     <h3>Project information</h3>
     <ul>
   <li>Project Name: <strong>` +
-                this.project_name +
+                this.form.project_name +
                 `</strong> </li>
   <li>Activity: <strong>` +
-                this.activity +
+                this.form.activity +
                 `</strong> </li>
   <li>
-  Description: <br>
+  Project details: <br>
   <strong>` +
-                this.description +
+                this.form.description +
                 `</strong>
   </li>
-<ul>
   <h3>Personal information</h3>
       <ul>
     <li>Name: <strong>` +
-                this.full_name +
+                this.form.full_name +
                 `</strong> </li>
     <li>Email: <strong>` +
-                this.email +
+                this.form.email +
                 `</strong> </li>
     <li>Phone number: <strong>` +
-                this.phone +
+                this.form.phone +
                 `</strong> </li>
     <li>Region: <strong>` +
-                this.region +
+                this.form.region +
                 `</strong> </li>
     <li>City: <strong>` +
-                this.city +
+                this.form.city +
                 `</strong> </li>
     <li>Address: <strong>` +
-                this.address +
+                this.form.address +
                 `</strong> </li>
-  <ul>
   </div>
 
 
