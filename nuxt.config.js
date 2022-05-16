@@ -71,11 +71,11 @@ export default {
       to: "info@tchewa.com",
     },
     smtp: {
-      host: "",
+      host: "smtp.mailtrap.io",
       port: 2525,
       auth: {
-        user: "",
-        pass: "",
+        user: "3c6b6198cc46d8",
+        pass: "af62cd84e51fcc",
       },
       connectionTimeout: 180000,
       greetingTimeout: 90000,
